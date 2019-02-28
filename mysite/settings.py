@@ -129,6 +129,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 if '/app' in os.environ['HOME']:
     import django_heroku
     django_heroku.settings(locals())
-
-# Get dj_database_url to forget about SSL at the last second
-#  del DATABASES['default']['OPTIONS']['sslmode']
