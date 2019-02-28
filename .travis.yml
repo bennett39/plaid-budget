@@ -6,6 +6,5 @@ install:
   - pip install -r requirements.txt
 before_script:
   - echo 'DATABASE_URL=sqlite:///db.sqlite3' > .env
-  - python manage.py migrate
 script:
   - python manage.py test
