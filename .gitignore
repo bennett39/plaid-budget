@@ -16,3 +16,6 @@ __pycache__/
 # Logging
 *.log
 *.pot
+
+# DB
+*.sqlite
