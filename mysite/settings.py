@@ -126,7 +126,9 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Heroku support
-django_heroku.settings(locals())
+if '/budget' in os.environ['HOME']:
+    import django_heroku
+    django_heroku.settings(locals())
 
 # Get dj_database_url to forget about SSL at the last second
 del DATABASES['default']['OPTIONS']['sslmode']
