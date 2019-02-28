@@ -131,4 +131,4 @@ if '/app' in os.environ['HOME']:
     django_heroku.settings(locals())
 
 # Get dj_database_url to forget about SSL at the last second
-del DATABASES['default']['OPTIONS']['sslmode']
+#  del DATABASES['default']['OPTIONS']['sslmode']
