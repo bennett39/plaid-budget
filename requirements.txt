@@ -15,6 +15,7 @@ plaid-python==2.4.1
 psycopg2==2.7.7
 pycodestyle==2.5.0
 pyflakes==2.1.0
+python-dotenv==0.10.1
 pytz==2018.9
 PyYAML==3.13
 requests==2.21.0
