@@ -18,5 +18,5 @@ __pycache__/
 *.pot
 
 # DB
-*.sqlite
+*.sqlite3
 .env
