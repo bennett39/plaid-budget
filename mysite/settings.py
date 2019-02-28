@@ -126,7 +126,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Heroku support
-if '/budget' in os.environ['HOME']:
+if '/app' in os.environ['HOME']:
     import django_heroku
     django_heroku.settings(locals())
 
