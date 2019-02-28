@@ -1,2 +1,18 @@
+# Vim
+*.swp
+*.swo
+
+# Testing
+htmlcov/
+.coverage
+lint/
+
+# Python
 .python-version
-_pycache_/
+__pycache__/
+*.pyo
+*.pyc
+
+# Logging
+*.log
+*.pot
