@@ -6,6 +6,9 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
+from dotenv import load_dotenv
+load_dotenv()
+
 PLAID_CLIENT_ID = os.getenv('PLAID_CLIENT_ID')
 PLAID_SECRET = os.getenv('PLAID_SECRET')
 PLAID_PUBLIC_KEY = os.getenv('PLAID_PUBLIC_KEY')
@@ -33,7 +36,7 @@ def index(request):
     return render(request, "plaid_api/index.html", context)
 
 
-@require_http_methods(['POST', 'GET'])
+@require_http_methods(['POST'])
 def get_access_token(request):
     """Return plaid access token via POST only"""
     global access_token
@@ -41,8 +44,7 @@ def get_access_token(request):
     try:
         exchange_response = client.Item.public_token.exchange(public_token)
     except plaid.errors.PlaidError as e:
-        return jsonify(format_error(e))
-
+        return JsonResponse(format_error(e))
     pretty_print_response(exchange_response)
     access_token = exchange_response['access_token']
     return JsonResponse(exchange_response)
