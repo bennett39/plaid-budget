@@ -92,6 +92,42 @@ def transactions(request):
     pretty_print_response(transactions_response)
     return JsonResponse({'error': None, 'transactions': transactions_response})
 
+def balance(request):
+    """
+    Retrieve real-time balance data for each of an Item's accounts
+    https://plaid.com/docs/#balance
+    """
+    try:
+        balance_response = client.Accounts.balance.get(access_token)
+    except plaid.errors.PlaidError as e:
+        return JsonResponse({
+            'error': {
+                'display_message': e.display_message,
+                'error_code': e.code,
+                'error_type': e.type
+            }
+        })
+    pretty_print_response(balance_response)
+    return JsonResponse({'error': None, 'balance': balance_response})
+
+def accounts(request):
+    """
+    Retrieve an Item's accounts
+    https://plaid.com/docs/#accounts
+    """
+    try:
+        accounts_response = client.Accounts.get(access_token)
+    except plaid.errors.PlaidError as e:
+        return JsonResponse({
+            'error': {
+                'display_message': e.display_message,
+                'error_code': e.code,
+                'error_type': e.type
+            }
+        })
+    pretty_print_response(accounts_response)
+    return JsonResponse({'error': None, 'accounts': accounts_response})
+
 
 def pretty_print_response(response):
     print(json.dumps(response, indent=2, sort_keys=True))
