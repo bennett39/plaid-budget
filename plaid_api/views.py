@@ -49,6 +49,21 @@ def get_access_token(request):
     access_token = exchange_response['access_token']
     return JsonResponse(exchange_response)
 
+
+def auth(request):
+    try:
+        auth_response = client.Auth.get(access_token)
+    except plaid.errors.PlaidError as e:
+        return JsonResponse({
+            'error': {
+                'display_message': e.display_message,
+                'error_code': e.type,
+            }
+        })
+    pretty_print_response(auth_response)
+    return JsonResponse({'error': None, 'auth': auth_response})
+
+
 def pretty_print_response(response):
     print(json.dumps(response, indent=2, sort_keys=True))
 
