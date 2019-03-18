@@ -66,10 +66,7 @@ def auth(request):
     return JsonResponse({'error': None, 'auth': auth_response})
 
 
-def transactions(request):
-    start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
-            + datetime.timedelta(-30))
-    end_date = '{:%Y-%m-%d}'.format(datetime.datetime.now())
+def identity(request):
     try:
         identity_response = client.Identity.get(access_token)
     except plaid.errors.PlaidError as e:
@@ -83,6 +80,17 @@ def transactions(request):
     pretty_print_response(identity_response)
     return JsonResponse({'error': None, 'identity': identity_response})
 
+def transactions(request):
+    start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
+                + datetime.timedelta(-30))
+    end_date = '{:%Y-%m-%d}'.format(datetime.datetime.now())
+    try:
+        transactions_response = client.Transactions.get(access_token,
+                start_date, end_date)
+    except plaid.errors.PlaidError as e:
+        return JsonResponse(format_error(e))
+    pretty_print_response(transactions_response)
+    return JsonResponse({'error': None, 'transactions': transactions_response})
 
 
 def pretty_print_response(response):
