@@ -7,6 +7,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
+from .models import Item
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -40,7 +42,6 @@ def index(request):
 @require_http_methods(['POST'])
 def get_access_token(request):
     """Return plaid access token via POST only"""
-    global access_token
     public_token = request.POST['public_token']
     try:
         exchange_response = client.Item.public_token.exchange(public_token)
@@ -48,6 +49,8 @@ def get_access_token(request):
         return JsonResponse(format_error(e))
     pretty_print_response(exchange_response)
     access_token = exchange_response['access_token']
+    i = Item(user=request.user, access_token=access_token)
+    i.save()
     return JsonResponse(exchange_response)
 
 
@@ -80,6 +83,7 @@ def identity(request):
     pretty_print_response(identity_response)
     return JsonResponse({'error': None, 'identity': identity_response})
 
+
 def transactions(request):
     start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
                 + datetime.timedelta(-30))
@@ -91,6 +95,7 @@ def transactions(request):
         return JsonResponse(format_error(e))
     pretty_print_response(transactions_response)
     return JsonResponse({'error': None, 'transactions': transactions_response})
+
 
 def balance(request):
     """
@@ -109,6 +114,7 @@ def balance(request):
         })
     pretty_print_response(balance_response)
     return JsonResponse({'error': None, 'balance': balance_response})
+
 
 def accounts(request):
     """
