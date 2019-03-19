@@ -26,7 +26,7 @@ client = plaid.Client(
     api_version='2018-05-22',
 )
 
-access_token = None
+access_token = Item.objects.all().first().access_token
 
 
 def index(request):
@@ -49,7 +49,7 @@ def get_access_token(request):
         return JsonResponse(format_error(e))
     pretty_print_response(exchange_response)
     access_token = exchange_response['access_token']
-    i = Item(user=request.user, access_token=access_token)
+    i = Item(access_token=access_token, user=request.user)
     i.save()
     return JsonResponse(exchange_response)
 
