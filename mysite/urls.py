@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 
 urlpatterns = [
-    path('budget/', include('budget.urls')),
+    url(r'^accounts/', include('django_registration.backends.activation.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
+    path('', include('budget.urls')),
     path('plaid/', include('plaid_api.urls')),
     path('admin/', admin.site.urls),
 ]
