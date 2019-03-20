@@ -6,6 +6,7 @@ import plaid
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
+from django.contrib.auth.decorators import login_required
 
 from .models import Item
 
@@ -26,9 +27,10 @@ client = plaid.Client(
     api_version='2018-05-22',
 )
 
-access_token = None
+access_token = Item.objects.all().first().access_token
 
 
+@login_required
 def index(request):
     """Show login landing page"""
     context = {
@@ -39,6 +41,7 @@ def index(request):
     return render(request, "plaid_api/index.html", context)
 
 
+@login_required
 @require_http_methods(['POST'])
 def get_access_token(request):
     """Return plaid access token via POST only"""
@@ -49,11 +52,12 @@ def get_access_token(request):
         return JsonResponse(format_error(e))
     pretty_print_response(exchange_response)
     access_token = exchange_response['access_token']
-    i = Item(user=request.user, access_token=access_token)
+    i = Item(access_token=access_token, user=request.user)
     i.save()
     return JsonResponse(exchange_response)
 
 
+@login_required
 def auth(request):
     try:
         auth_response = client.Auth.get(access_token)
@@ -69,6 +73,7 @@ def auth(request):
     return JsonResponse({'error': None, 'auth': auth_response})
 
 
+@login_required
 def identity(request):
     try:
         identity_response = client.Identity.get(access_token)
@@ -84,6 +89,7 @@ def identity(request):
     return JsonResponse({'error': None, 'identity': identity_response})
 
 
+@login_required
 def transactions(request):
     start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
                 + datetime.timedelta(-30))
@@ -97,6 +103,7 @@ def transactions(request):
     return JsonResponse({'error': None, 'transactions': transactions_response})
 
 
+@login_required
 def balance(request):
     """
     Retrieve real-time balance data for each of an Item's accounts
@@ -116,6 +123,7 @@ def balance(request):
     return JsonResponse({'error': None, 'balance': balance_response})
 
 
+@login_required
 def accounts(request):
     """
     Retrieve an Item's accounts
