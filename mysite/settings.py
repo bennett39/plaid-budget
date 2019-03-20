@@ -22,13 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Use .env locally, Heroku environment variables in production
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
-        dotenv.load_dotenv(dotenv_file)
+    dotenv.load_dotenv(dotenv_file)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9&nb_&zhl*%2=la^$$wwmc$sba1a+%+y^dr4jz+c&7n+55n_4j'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -135,10 +135,10 @@ ACCOUNT_ACTIVATION_DAYS = 7
 LOGOUT_REDIRECT_URL = '/'
 
 # Email
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT =  os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 
 # Heroku support

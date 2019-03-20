@@ -27,7 +27,6 @@ client = plaid.Client(
     api_version='2018-05-22',
 )
 
-access_token = Item.objects.all().first().access_token
 
 
 @login_required
@@ -59,6 +58,7 @@ def get_access_token(request):
 
 @login_required
 def auth(request):
+    access_token = lookup_access_tokens(request.user)[0]
     try:
         auth_response = client.Auth.get(access_token)
     except plaid.errors.PlaidError as e:
@@ -75,6 +75,7 @@ def auth(request):
 
 @login_required
 def identity(request):
+    access_token = lookup_access_tokens(request.user)[0]
     try:
         identity_response = client.Identity.get(access_token)
     except plaid.errors.PlaidError as e:
@@ -91,6 +92,7 @@ def identity(request):
 
 @login_required
 def transactions(request):
+    access_token = lookup_access_tokens(request.user)[0]
     start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
                 + datetime.timedelta(-30))
     end_date = '{:%Y-%m-%d}'.format(datetime.datetime.now())
@@ -109,6 +111,7 @@ def balance(request):
     Retrieve real-time balance data for each of an Item's accounts
     https://plaid.com/docs/#balance
     """
+    access_token = lookup_access_tokens(request.user)[0]
     try:
         balance_response = client.Accounts.balance.get(access_token)
     except plaid.errors.PlaidError as e:
@@ -129,6 +132,7 @@ def accounts(request):
     Retrieve an Item's accounts
     https://plaid.com/docs/#accounts
     """
+    access_token = lookup_access_tokens(request.user)[0]
     try:
         accounts_response = client.Accounts.get(access_token)
     except plaid.errors.PlaidError as e:
@@ -156,3 +160,8 @@ def format_error(e):
         }
     }
 
+def lookup_access_tokens(user):
+    res = []
+    for item in Item.objects.filter(user=user):
+        res.append(item.access_token)
+    return res
