@@ -10,7 +10,7 @@ env:
   global:
   - EMAIL_HOST="smtp.sendgrid.net"
   - EMAIL_PORT=587
-  - secure: TheyL340qHLRPR6+ieqSJ32WfFHojiKghN0z9j58J5l93eeXfs4+DCU4pRy81imCjluLYZdIWhnwy0BcAhxRkfuno/MJVydqvS94hcKtCrYizimRt4FwSrA912KOS7cMAzWKy7z7cWgwniVvQJYkMXpCiKdfZLEB/4FZV2sI9vhut0gQXSnHBJPxrdlbW94bwWamzcT6JkNJAKcZ2WYIeuAQCtGOisS3Xl6NdPyF/MLVodJet7NAg51RTA5E8tGe1Me5JWTNXT/P5Nno249JWPNJin/OUjUkIta/45Jwg4HbIO4v4Co8y2jTT7Q6EtsyDJjDDzpgnNSL2RNghK7/TAO9BhM65r+QEQP0AY5jgR5u2VrqPxNTGGO4hIq0/N7rvD98vhaczB0/x3N+uOqND41569k6pewc8mzQFaZPKFRIVr2u6i6D7zhZ8tl60OmZk6zQMRlSXeHZL4VEi9imiVQL9d6ArzJUm2aWc16kULRtokJ2OmlPCMu+GsK3srw67PEr7X+QMkUmZBVHy1vbK/8SKK9hqrnzTxZgA+M2Ozi6mRZIgXqbUXqktIKN8GaO0Ru+102leTZep+im9teoS2+pLchZbIezrp99E67e4AVBSGuYxVmMuQAEl9CW0PfYpqbKXeSDzzeK3o91yaUg+QxlMD3BbIz4FiVMQE4cXGw=
+  - SECRET_KEY="Trav1s53cretKeyyyyyyy$^bennett39"
 script:
 - python manage.py migrate
 - python manage.py test
