@@ -24,3 +24,14 @@ __pycache__/
 # Static
 static/
 staticfiles/
+
+# Angular
+DS_STORE
+
+/dist/
+/bazel-out
+/integration/bazel/bazel-*
+e2e_test.*
+node_modules
+tools/gulp-tasks/cldr/cldr-data/
+
