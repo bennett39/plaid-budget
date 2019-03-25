@@ -20,3 +20,7 @@ __pycache__/
 # DB
 *.sqlite3
 .env
+
+# Static
+static/
+staticfiles/
