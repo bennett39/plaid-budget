@@ -20,7 +20,7 @@ from django.conf.urls import url
 urlpatterns = [
     url(r'^accounts/', include('django_registration.backends.activation.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
-    path('', include('budget.urls')),
+    path('', include('budget.urls', namespace='budget')),
     path('plaid/', include('plaid_api.urls')),
     path('admin/', admin.site.urls),
 ]
