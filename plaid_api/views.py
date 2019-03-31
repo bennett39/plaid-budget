@@ -3,10 +3,13 @@ import json
 import os
 import plaid
 
-from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth.decorators import login_required
+
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 
 from .models import Item
 
@@ -26,7 +29,6 @@ client = plaid.Client(
     environment=PLAID_ENV,
     api_version='2018-05-22',
 )
-
 
 
 @login_required
@@ -55,14 +57,15 @@ def get_access_token(request):
     i.save()
     return JsonResponse(exchange_response)
 
-
-@login_required
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def auth(request):
+
     access_token = lookup_access_tokens(request.user)[0]
     try:
         auth_response = client.Auth.get(access_token)
     except plaid.errors.PlaidError as e:
-        return JsonResponse({
+        return Response({
             'error': {
                 'display_message': e.display_message,
                 'error_code': e.code,
@@ -70,16 +73,17 @@ def auth(request):
             }
         })
     pretty_print_response(auth_response)
-    return JsonResponse({'error': None, 'auth': auth_response})
+    return Response({'error': None, 'auth': auth_response})
 
 
-@login_required
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def identity(request):
     access_token = lookup_access_tokens(request.user)[0]
     try:
         identity_response = client.Identity.get(access_token)
     except plaid.errors.PlaidError as e:
-        return JsonResponse({
+        return Response({
             'error': {
                 'display_message': e.display_message,
                 'error_code': e.code,
@@ -87,10 +91,11 @@ def identity(request):
             }
         })
     pretty_print_response(identity_response)
-    return JsonResponse({'error': None, 'identity': identity_response})
+    return Response({'error': None, 'identity': identity_response})
 
 
-@login_required
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def transactions(request):
     access_token = lookup_access_tokens(request.user)[0]
     start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
@@ -100,12 +105,13 @@ def transactions(request):
         transactions_response = client.Transactions.get(access_token,
                 start_date, end_date)
     except plaid.errors.PlaidError as e:
-        return JsonResponse(format_error(e))
+        return Response(format_error(e))
     pretty_print_response(transactions_response)
-    return JsonResponse({'error': None, 'transactions': transactions_response})
+    return Response({'error': None, 'transactions': transactions_response})
 
 
-@login_required
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def balance(request):
     """
     Retrieve real-time balance data for each of an Item's accounts
@@ -115,7 +121,7 @@ def balance(request):
     try:
         balance_response = client.Accounts.balance.get(access_token)
     except plaid.errors.PlaidError as e:
-        return JsonResponse({
+        return Response({
             'error': {
                 'display_message': e.display_message,
                 'error_code': e.code,
@@ -123,10 +129,11 @@ def balance(request):
             }
         })
     pretty_print_response(balance_response)
-    return JsonResponse({'error': None, 'balance': balance_response})
+    return Response({'error': None, 'balance': balance_response})
 
 
-@login_required
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def accounts(request):
     """
     Retrieve an Item's accounts
@@ -136,7 +143,7 @@ def accounts(request):
     try:
         accounts_response = client.Accounts.get(access_token)
     except plaid.errors.PlaidError as e:
-        return JsonResponse({
+        return Response({
             'error': {
                 'display_message': e.display_message,
                 'error_code': e.code,
@@ -144,7 +151,7 @@ def accounts(request):
             }
         })
     pretty_print_response(accounts_response)
-    return JsonResponse({'error': None, 'accounts': accounts_response})
+    return Response({'error': None, 'accounts': accounts_response})
 
 
 def pretty_print_response(response):
