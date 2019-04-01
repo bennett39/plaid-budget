@@ -8,6 +8,7 @@ django-filter==2.1.0
 django-heroku==0.3.1
 django-registration==3.0
 djangorestframework==3.9.1
+djangorestframework-jwt==1.11.0
 entrypoints==0.3
 flake8==3.7.7
 Flask==1.0.2
@@ -24,6 +25,7 @@ plaid-python==2.4.1
 psycopg2==2.7.7
 pycodestyle==2.5.0
 pyflakes==2.1.1
+PyJWT==1.7.1
 pyparsing==2.3.1
 python-dotenv==0.10.1
 pytz==2018.9
