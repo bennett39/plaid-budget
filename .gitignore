@@ -22,8 +22,7 @@ __pycache__/
 .env
 
 # Static
-static/
-staticfiles/
+mysite/static/
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 

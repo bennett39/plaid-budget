@@ -1,16 +1,18 @@
 language: python
 python:
 - 3.6
-install:
-- pip install --upgrade pip
-- pip install -r requirements.txt
-before_script:
-- echo 'DATABASE_URL=sqlite:///db.sqlite3' > .env
 env:
   global:
+  - TRAVIS_NODE_VERSION="4"
   - EMAIL_HOST="smtp.sendgrid.net"
   - EMAIL_PORT=587
   - SECRET_KEY="Trav1s53cretKeyyyyyyy$^bennett39"
+install:
+- pip install --upgrade pip
+- pip install -r requirements.txt
+- cd budget/my-app/ && npm install && cd ../../
+before_script:
+- echo 'DATABASE_URL=sqlite:///db.sqlite3' > .env
 script:
 - python manage.py migrate
 - python manage.py test
