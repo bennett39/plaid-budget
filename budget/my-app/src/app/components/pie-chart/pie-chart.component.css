@@ -1,0 +1,33 @@
+.pie_chart {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+text {
+  font-size: 0.65em;
+  background-color: rgba(51, 51, 51, 0.575);
+}
+
+path,
+line {
+ fill: none;
+ stroke: #ddd !important;
+ stroke-width: 1px;
+ shape-rendering: smoothEdges;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

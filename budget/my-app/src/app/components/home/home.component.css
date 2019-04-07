@@ -1,0 +1,14 @@
+.top {
+  padding: 10px;
+  text-align: center;
+}
+
+.example-list {
+  padding: 5px;
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: inherit;
+}
