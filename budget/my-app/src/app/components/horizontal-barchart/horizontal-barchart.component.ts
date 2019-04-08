@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 @Component({
   selector: 'app-horizontal-barchart',
   templateUrl: './horizontal-barchart.component.html',
-  styleUrls: ['./horizontal-barchart.component.css'],
+  styleUrls: ['./horizontal-barchart.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class HorizontalBarchartComponent implements OnInit {

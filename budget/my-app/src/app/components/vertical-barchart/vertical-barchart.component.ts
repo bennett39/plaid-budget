@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 @Component({
   selector: 'app-vertical-barchart',
   templateUrl: './vertical-barchart.component.html',
-  styleUrls: ['./vertical-barchart.component.css'],
+  styleUrls: ['./vertical-barchart.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class VerticalBarchartComponent implements OnInit {
