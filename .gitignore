@@ -21,9 +21,6 @@ __pycache__/
 *.sqlite3
 .env
 
-# Static
-mysite/static/
-
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
