@@ -9,8 +9,8 @@ import * as moment from 'moment';
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.css']
 })
-export class TransactionsComponent implements OnInit {
 
+export class TransactionsComponent implements OnInit {
 // tslint:disable-next-line: variable-name
   chart_obj: Array<any>;
 // tslint:disable-next-line: variable-name
