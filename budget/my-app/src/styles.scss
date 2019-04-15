@@ -1,18 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 $font-stack: "Roboto", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
 
 $font: "Roboto", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
 
 * {
-<<<<<<< HEAD:budget/my-app/src/styles.scss
   font-family: $font-stack;
-=======
-  font-family: $font;
->>>>>>> c1885b0f57a7d128d3e3c6f6f7e82cb212198127:budget/my-app/src/styles.scss
   text-rendering:optimizeLegibility;
 }
 
