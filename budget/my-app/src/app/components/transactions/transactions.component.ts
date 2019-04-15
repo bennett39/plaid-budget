@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { TransactionsService } from '../../services/transactions.service';
 import * as d3 from 'd3';
 import * as moment from 'moment';
+import * as transactionsTest from '../../../app/transactions-sandbox.json';
 
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
-  styleUrls: ['./transactions.component.css']
+  styleUrls: ['./transactions.component.scss']
 })
 
 export class TransactionsComponent implements OnInit {
@@ -15,6 +16,7 @@ export class TransactionsComponent implements OnInit {
   chart_obj: Array<any>;
 // tslint:disable-next-line: variable-name
   chart_obj_vert: Array<any>;
+// tslint:disable-next-line: variable-name
   year_calc;
   showTicks;
   autoTicks = false;
@@ -179,8 +181,8 @@ export class TransactionsComponent implements OnInit {
   ) { }
 
   returnTransactions() {
-    this.transactionsService.getTransactions()
-      .subscribe(data => {
+    // this.transactionsService.getTransactions()
+      // .subscribe(data => {
         const all_transactions = [];
         const current_month_transactions = [];
         const last_month_transactions = [];
@@ -188,10 +190,9 @@ export class TransactionsComponent implements OnInit {
         this.catCount = [];
         const counts = {};
 
-        console.log('raw output', data);
-
         // filter data based on date
-        const transactions_array = data['transactions'].transactions;
+        // const transactions_array = data['transactions'].transactions;
+        const transactions_array = transactionsTest.default.transactions;
         // tslint:disable-next-line: no-shadowed-variable
         transactions_array.map(data => {
           transaction_category.push(data.category[0]);
@@ -244,20 +245,20 @@ export class TransactionsComponent implements OnInit {
             'value': this.lastMonthTotal
           }
         ];
-        this.filterByMonth(this.transactions_data);
-      },
-        (error) => this.serverError = true
-      );
+        this.filterByMonth(transactionsTest.default.transactions);
+      // },
+      //   (error) => this.serverError = true
+      // );
   }
 
   pullTransactions() {
-    this.transactionsService.getTransactions()
-      .subscribe(data => {
-        this.transactions_data = data['transactions'].transactions;
-        this.filterByMonth(this.transactions_data);
-      },
-        (error) => this.serverError = true
-      );
+    // this.transactionsService.getTransactions()
+    //   .subscribe(data => {
+        this.transactions_data = transactionsTest.default.transactions;
+        this.filterByMonth(transactionsTest.default.transactions);
+      // },
+      //   (error) => this.serverError = true
+      // );
   }
 
   ngOnInit() {
@@ -295,7 +296,7 @@ export class TransactionsComponent implements OnInit {
   }
 
   sixMonthChart() {
-    this.filterByMonth(this.transactions_data);
+    this.filterByMonth(transactionsTest.default.transactions);
     this.chart_obj_vert = [];
     this.sixMonth_obj.map(months => {
       this.chart_obj_vert.push(

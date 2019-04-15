@@ -1,13 +1,11 @@
 <div class="_topSection">
-  <h2 *ngIf='!lastMonthClick' class="_title">{{dateShow | date:'MMMM'}} Transaction Dashboard</h2>
-  <h2 *ngIf='lastMonthClick' class="_title">{{lastMonthShowMonth | date:'MMMM'}} Transaction Dashboard</h2>
+  <h2 *ngIf='!lastMonthClick' class = "_title">{{dateShow | date:'MMMM'}} Transaction Dashboard</h2>
+  <h2 *ngIf='lastMonthClick' class = "_title">{{lastMonthShowMonth | date:'MMMM'}} Transaction Dashboard</h2>
 
-  <!-- <h4 *ngIf='!lastMonthClick' class = "_callout90">Over the past 6 months, you've spent: {{transactionTotal | currency}}</h4> -->
+  <h4 *ngIf='!lastMonthClick' class = "_callout90">Over the past 6 months, you've spent: {{transactionTotal | currency}}</h4>
 
-  <h4 *ngIf='!lastMonthClick' class="_calloutMon">So far in {{dateShow| date:'MMMM'}}, you've spent:
-    {{currentMonthTotal | currency}}</h4>
-  <h4 *ngIf='lastMonthClick' class="_calloutMon">In {{lastMonthShowMonth| date:'MMMM'}}, you spent:
-    {{lastMonthTotal | currency}}</h4>
+  <h4 *ngIf='!lastMonthClick' class = "_calloutMon">So far in {{dateShow| date:'MMMM'}}, you've spent: {{currentMonthTotal | currency}}</h4>
+  <h4 *ngIf='lastMonthClick' class = "_calloutMon">In {{lastMonthShowMonth| date:'MMMM'}}, you spent: {{lastMonthTotal | currency}}</h4>
 
   <div class='_radioGroup'>
     <mat-radio-group class="example-radio-group" [(ngModel)]="lastMonth">
@@ -30,29 +28,35 @@
   <div class='_sliderGroup'>
     <div *ngIf='!dayShowUndefined'>
       <div *ngIf='!lastMonthClick'>
-        <h4 class="callout">Transaction Range: <strong>{{firstDayShowCurrentMonth | date:'M/d'}}</strong> to
-          <strong>{{sliderDayShow | date:'M/d'}}</strong></h4>
+        <h4 class = "callout">Transaction Range: <strong>{{firstDayShowCurrentMonth | date:'M/d'}}</strong> to <strong>{{sliderDayShow | date:'M/d'}}</strong></h4>
       </div>
       <div *ngIf='lastMonthClick'>
-        <h4 class="callout">Transaction Range: <strong>{{firstDayShowLastMonth | date:'M/d'}}</strong> to
-          <strong>{{sliderDayShowLastMon | date:'M/d'}}</strong></h4>
+          <h4 class = "callout">Transaction Range: <strong>{{firstDayShowLastMonth | date:'M/d'}}</strong> to <strong>{{sliderDayShowLastMon | date:'M/d'}}</strong></h4>
       </div>
     </div>
     <div *ngIf='dayShowUndefined'>
       <div *ngIf='!lastMonthClick'>
-        <h4 class="callout">Transaction Range: <strong>{{firstDayShowCurrentMonth | date:'M/d'}}</strong> to
-          <strong>{{dateShow | date:'M/d'}}</strong></h4>
+        <h4 class = "callout">Transaction Range: <strong>{{firstDayShowCurrentMonth | date:'M/d'}}</strong> to <strong>{{dateShow | date:'M/d'}}</strong></h4>
       </div>
       <div *ngIf='lastMonthClick'>
-        <h4 class="callout">Transaction Range: <strong>{{firstDayShowLastMonth | date:'M/d'}}</strong> to
-          <strong>{{sliderDayShowLastMon | date:'M/d'}}</strong></h4>
+          <h4 class = "callout">Transaction Range: <strong>{{firstDayShowLastMonth | date:'M/d'}}</strong> to <strong>{{sliderDayShowLastMon | date:'M/d'}}</strong></h4>
       </div>
     </div>
 
     <div>
-      <mat-slider (change)="updateSlider($event)" class="example-margin" thumbLabel [value]="myValue"
-        [displayWith]="formatLabel" [tickInterval]="1" [(ngModel)]="myValue" (input)="myValue = $event.value" [max]=31
-        [min]=1 [step]=1 style='text-align:center'>
+      <mat-slider
+      (change)="updateSlider($event)"
+      class="example-margin"
+      thumbLabel
+      [value] = "myValue"
+      [displayWith]="formatLabel"
+      [tickInterval]="1"
+      [(ngModel)]="myValue"
+      (input)="myValue = $event.value"
+      [max] = 31
+      [min]= 1
+      [step]= 1
+      style='text-align:center'>
       </mat-slider>
     </div>
 
@@ -62,9 +66,7 @@
 <div class="_sectionTwo">
   <div class='_sixMonthGroup'>
     <div class='buttonGroup'>
-      <button mat-button (click)="sixMonthChart()">
-        <h6>Click to see past 6 months > </h6>
-      </button>
+        <button mat-button (click)="sixMonthChart()"><h6>Click to see past 6 months > </h6></button>
     </div>
   </div>
   <div class="chart_vert">
@@ -72,12 +74,16 @@
   </div>
 </div>
 
-<div class="_sectionThree">
-  <h4 class="_title">Transactions by Category</h4>
+<div class = "_sectionThree">
+  <h4 class="_title">Transactions by Category this Month</h4>
 
   <div class="pie_chart">
     <app-pie-chart *ngIf="catCount" [data]="catCount"></app-pie-chart>
   </div>
+
+  <svg>
+    <path></path>
+  </svg>
 </div>
 
 
@@ -98,3 +104,5 @@
     </td>
   </tr>
 </table> -->
+
+
