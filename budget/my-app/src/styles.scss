@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+$font-stack: "Roboto", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
 
 * {
-  font-family: "Roboto", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+  font-family: $font-stack;
   text-rendering:optimizeLegibility;
 }
 
@@ -24,6 +27,12 @@ h3 {font-size: 1.872em;}
 h4 {font-size: 1.6em;}
 h5 {font-size: 1.328em;}
 h6 {font-size: 1.2em;}
+
+// svg {
+//  -webkit-box-shadow: 0px 4px 18px -8px rgba(0,0,0,0.44);
+//   -moz-box-shadow: 0px 4px 18px -8px rgba(0,0,0,0.44);
+//   box-shadow: 0px 4px 18px -8px rgba(0,0,0,0.44);
+// }
 
 
 .mat-slider-thumb-label {
