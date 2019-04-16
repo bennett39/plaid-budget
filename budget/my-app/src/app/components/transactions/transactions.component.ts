@@ -181,8 +181,8 @@ export class TransactionsComponent implements OnInit {
   ) { }
 
   returnTransactions() {
-    // this.transactionsService.getTransactions()
-      // .subscribe(data => {
+    this.transactionsService.getTransactions()
+      .subscribe(data => {
         const all_transactions = [];
         const current_month_transactions = [];
         const last_month_transactions = [];
@@ -191,8 +191,7 @@ export class TransactionsComponent implements OnInit {
         const counts = {};
 
         // filter data based on date
-        // const transactions_array = data['transactions'].transactions;
-        const transactions_array = transactionsTest.default.transactions;
+        const transactions_array = data['transactions'].transactions;
         // tslint:disable-next-line: no-shadowed-variable
         transactions_array.map(data => {
           transaction_category.push(data.category[0]);
@@ -246,19 +245,19 @@ export class TransactionsComponent implements OnInit {
           }
         ];
         this.filterByMonth(transactionsTest.default.transactions);
-      // },
-      //   (error) => this.serverError = true
-      // );
+      },
+         (error) => this.serverError = true
+     );
   }
 
   pullTransactions() {
-    // this.transactionsService.getTransactions()
-    //   .subscribe(data => {
+    this.transactionsService.getTransactions()
+      .subscribe(data => {
         this.transactions_data = transactionsTest.default.transactions;
         this.filterByMonth(transactionsTest.default.transactions);
-      // },
-      //   (error) => this.serverError = true
-      // );
+      },
+         (error) => this.serverError = true
+      );
   }
 
   ngOnInit() {
