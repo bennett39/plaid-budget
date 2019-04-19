@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<h1 class="display">Log In</h1>
+
 {% if form.errors %}
   <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -17,19 +19,30 @@
 
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %}
-  <table>
-    <tr>
-      <td>{{ form.username.label_tag }}</td>
-      <td>{{ form.username }}</td>
-    </tr>
-    <tr>
-      <td>{{ form.password.label_tag }}</td>
-      <td>{{ form.password }}</td>
-    </tr>
-  </table>
+  <div class="form-group">
+    <label for={{ form.username.id_for_label }}>{{ form.username.label_tag }}</label>
+    <input
+      type="text"
+      class="form-control"
+      id={{ form.username.id_for_label }}
+      name={{ form.username.html_name }}
+      placeholder="Enter Username"
+    >
+  </div>
+  <div class="form-group">
+    <label for={{ form.password.id_for_label }}>{{ form.password.label_tag }}</label>
+    <input
+      type="text"
+      class="form-control"
+      id={{ form.password.id_for_label }}
+      name={{ form.password.html_name }}
+      placeholder="Enter Username"
+    >
+  </div>
 
-  <input type="submit" value="login">
+  <button type="submit" class="btn btn-primary">Log in</button>
   <input type="hidden" name="next" value="{{ next }}">
+
 </form>
 
 <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
