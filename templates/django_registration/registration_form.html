@@ -1,15 +1,63 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<h1>Create a new account</h1>
   {% if form.errors %}
     <p>You filled something out wrong</p>
   {% endif %}
 
   <form method="POST" action="{% url 'django_registration_register' %}">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="login">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id={{ form.username.id_for_label }}
+        name={{ form.username.html_name }}
+        placeholder="Enter Username"
+      >
+      <small id="usernameHelp" class="form-text text-muted">{{ form.username.help_text }}</small>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        id={{ form.email.id_for_label }}
+        name={{ form.email.html_name }}
+        placeholder="Enter Email"
+      >
+      <small id="emailHelp" class="form-text text-muted">{{ form.email.help_text }}</small>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        id={{ form.password1.id_for_label }}
+        name={{ form.password1.html_name }}
+        placeholder="Enter Password"
+        aria-describedby="password1Help"
+      >
+      <small id="password1Help" class="form-text text-muted">{{ form.password1.help_text }}</small>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        id={{ form.password2.id_for_label }}
+        name={{ form.password2.html_name }}
+        placeholder="Confirm Password"
+        aria-describedby="password2Help"
+      >
+      <small id="password2Help" class="form-text text-muted">{{ form.password2.help_text }}</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign up</button>
     <input type="hidden" name="next" value="{{ next }}">
+
   </form>
 
 {% endblock %}
