@@ -43,13 +43,13 @@ INSTALLED_APPS = [
     'budget.apps.BudgetConfig',
     'plaid_api.apps.PlaidApiConfig',
     'corsheaders',
+    'django_registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_registration',
     'rest_framework',
 ]
 
