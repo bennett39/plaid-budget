@@ -2,6 +2,7 @@
 
 {% block content %}
 
-<h1>Thanks for activating your account. You can now log in!</h1>
+<h1>Thanks for activating your account.</h1>
+<p>You can now <a href="{% url 'login' %}?next=/">log in!</a></p>
 
 {% endblock %}
