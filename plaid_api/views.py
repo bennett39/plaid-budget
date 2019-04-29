@@ -59,21 +59,17 @@ def get_access_token(request):
     i.save()
     return JsonResponse(exchange_response)
 
+
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
 def auth(request):
-
-    access_token = lookup_access_tokens(request.user)[0]
-    try:
-        auth_response = client.Auth.get(access_token)
-    except plaid.errors.PlaidError as e:
-        return Response({
-            'error': {
-                'display_message': e.display_message,
-                'error_code': e.code,
-                'error_type': e.type,
-            }
-        })
+    access_tokens = lookup_access_tokens(request.user)
+    auth_response = {}
+    for access_token in access_tokens:
+        try:
+            auth_response[access_token] = client.Auth.get(access_token)
+        except plaid.errors.PlaidError as e:
+            auth_response[access_token] = format_error(e)
     pretty_print_response(auth_response)
     return Response({'error': None, 'auth': auth_response})
 
@@ -81,17 +77,13 @@ def auth(request):
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
 def identity(request):
-    access_token = lookup_access_tokens(request.user)[0]
-    try:
-        identity_response = client.Identity.get(access_token)
-    except plaid.errors.PlaidError as e:
-        return Response({
-            'error': {
-                'display_message': e.display_message,
-                'error_code': e.code,
-                'error_type': e.type
-            }
-        })
+    access_tokens = lookup_access_tokens(request.user)
+    identity_response = {}
+    for access_token in access_tokens:
+        try:
+            identity_response[access_token] = client.Identity.get(access_token)
+        except plaid.errors.PlaidError as e:
+            identity_response[access_token] = format_error(e)
     pretty_print_response(identity_response)
     return Response({'error': None, 'identity': identity_response})
 
@@ -99,15 +91,17 @@ def identity(request):
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
 def transactions(request):
-    access_token = lookup_access_tokens(request.user)[0]
-    start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now() \
+    access_tokens = lookup_access_tokens(request.user)
+    start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now()
                 + datetime.timedelta(-30))
     end_date = '{:%Y-%m-%d}'.format(datetime.datetime.now())
-    try:
-        transactions_response = client.Transactions.get(access_token,
-                start_date, end_date)
-    except plaid.errors.PlaidError as e:
-        return Response(format_error(e))
+    transactions_response = {}
+    for access_token in access_tokens:
+        try:
+            transactions_response[access_token] = \
+                client.Transactions.get(access_token, start_date, end_date)
+        except plaid.errors.PlaidError as e:
+            transactions_response[access_token] = format_error(e)
     pretty_print_response(transactions_response)
     return Response({'error': None, 'transactions': transactions_response})
 
@@ -119,17 +113,13 @@ def balance(request):
     Retrieve real-time balance data for each of an Item's accounts
     https://plaid.com/docs/#balance
     """
-    access_token = lookup_access_tokens(request.user)[0]
-    try:
-        balance_response = client.Accounts.balance.get(access_token)
-    except plaid.errors.PlaidError as e:
-        return Response({
-            'error': {
-                'display_message': e.display_message,
-                'error_code': e.code,
-                'error_type': e.type
-            }
-        })
+    access_tokens = lookup_access_tokens(request.user)
+    balance_response = {}
+    for access_token in access_tokens:
+        try:
+            balance_response[access_token] = client.Accounts.balance.get(access_token)
+        except plaid.errors.PlaidError as e:
+            balance_response[access_token] = format_error(e)
     pretty_print_response(balance_response)
     return Response({'error': None, 'balance': balance_response})
 
@@ -141,17 +131,13 @@ def accounts(request):
     Retrieve an Item's accounts
     https://plaid.com/docs/#accounts
     """
-    access_token = lookup_access_tokens(request.user)[0]
-    try:
-        accounts_response = client.Accounts.get(access_token)
-    except plaid.errors.PlaidError as e:
-        return Response({
-            'error': {
-                'display_message': e.display_message,
-                'error_code': e.code,
-                'error_type': e.type
-            }
-        })
+    access_tokens = lookup_access_tokens(request.user)
+    accounts_response = {}
+    for access_token in access_tokens:
+        try:
+            accounts_response[access_token] = client.Accounts.get(access_token)
+        except plaid.errors.PlaidError as e:
+            accounts_response[access_token] = format_error(e)
     pretty_print_response(accounts_response)
     return Response({'error': None, 'accounts': accounts_response})
 
@@ -165,7 +151,6 @@ def format_error(e):
             'display_message': e.display_message,
             'error_code': e.code,
             'error_type': e.type,
-            'error_message': e.message
         }
     }
 
