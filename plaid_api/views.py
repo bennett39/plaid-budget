@@ -20,7 +20,7 @@ load_dotenv()
 PLAID_CLIENT_ID = os.getenv('PLAID_CLIENT_ID')
 PLAID_SECRET = os.getenv('PLAID_SECRET')
 PLAID_PUBLIC_KEY = os.getenv('PLAID_PUBLIC_KEY')
-PLAID_ENV = os.getenv('PLAID_ENV', 'sandbox')
+PLAID_ENV = os.getenv('PLAID_ENV', 'development')
 PLAID_PRODUCTS = os.getenv('PLAID_PRODUCTS', 'transactions')
 
 client = plaid.Client(
@@ -51,6 +51,7 @@ def get_access_token(request):
     try:
         exchange_response = client.Item.public_token.exchange(public_token)
     except plaid.errors.PlaidError as e:
+        print(e)
         return JsonResponse(format_error(e))
     pretty_print_response(exchange_response)
     access_token = exchange_response['access_token']
