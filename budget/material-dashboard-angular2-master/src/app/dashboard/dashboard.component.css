@@ -3,7 +3,8 @@
     margin: 120px -15px 120px -15px;
     padding: 8rem 2rem 8rem 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .dark-background {
@@ -11,10 +12,16 @@
     color: #fff;
 }
 
-h4 {
-    min-height: 100%;
-}
-
 .light-background {
     color: #111;
+}
+
+.callout {
+    align-items: center;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
 }

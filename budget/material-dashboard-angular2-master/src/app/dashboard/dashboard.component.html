@@ -1,30 +1,15 @@
 <div class="main-content">
   <div class="container-fluid">
-    <div class="row light-background">
-              <div class="col-sm-6">
-                  <h4 class="callout">
-                      What you've spent this month:
-                  </h4>
+    <div class="light-background">
+              <div class="callout">
+                  <h4>What you've spent this month, compared to last month:</h4>
               </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="card card-chart">
-                <div class="card-header card-header-danger">
-                    <div class="ct-chart" id="completedTasksChart"></div>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Completed Tasks</h4>
-                    <p class="card-category">Last Campaign Performance</p>
-                </div>
-                <div class="card-footer">
-                    <div class="stats">
-                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                    </div>
-                </div>
-            </div>
+          <div class="chart_line">
+                <app-line-chart [data]="line_array"></app-line-chart>
           </div>
     </div>
-    <div class="row dark-background">
-          <div class="col-sm-6">
+    <div class="dark-background">
+          <div class="pie_chart">
               <div class="card card-stats">
                   <div class="card-header card-header-danger card-header-icon">
                       <div class="card-icon">
@@ -40,7 +25,7 @@
                   </div>
               </div>
           </div>
-          <div class="col-sm-6">
+          <div class="callout">
               <h4 class="callout">
                 More content here.
               </h4>
