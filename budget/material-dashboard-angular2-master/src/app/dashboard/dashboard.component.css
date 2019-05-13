@@ -1,0 +1,27 @@
+.light-background,
+.dark-background {
+    margin: 120px -15px 120px -15px;
+    padding: 8rem 2rem 8rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dark-background {
+    background: #111;
+    color: #fff;
+}
+
+.light-background {
+    color: #111;
+}
+
+.callout {
+    align-items: center;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}

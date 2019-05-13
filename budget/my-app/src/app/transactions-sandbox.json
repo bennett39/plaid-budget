@@ -105,7 +105,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -142,7 +142,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -179,7 +179,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -216,8 +216,8 @@
         "Restaurants",
         "Coffee Shop"
       ],
-      "category_id": "13005043",
-      "date": "2018-10-01",
+      "category_id": "13005053",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -254,7 +254,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -291,7 +291,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -328,7 +328,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -366,7 +366,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -403,7 +403,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -439,7 +439,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -476,7 +476,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -513,7 +513,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -550,7 +550,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -588,7 +588,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -625,7 +625,7 @@
         "Debit"
       ],
       "category_id": "21006000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -661,7 +661,7 @@
         "Service"
       ],
       "category_id": "18000000",
-      "date": "2018-10-01",
+      "date": "2018-11-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -698,7 +698,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -735,7 +735,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -772,7 +772,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -810,7 +810,7 @@
         "Coffee Shop"
       ],
       "category_id": "13005043",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -847,7 +847,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -884,7 +884,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -921,7 +921,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -959,7 +959,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -996,7 +996,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1032,7 +1032,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1069,7 +1069,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1106,7 +1106,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1143,7 +1143,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1181,7 +1181,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-11-01",
+      "date": "2018-12-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1218,7 +1218,7 @@
         "Debit"
       ],
       "category_id": "21006000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1254,7 +1254,7 @@
         "Service"
       ],
       "category_id": "18000000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1291,7 +1291,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1328,7 +1328,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1365,7 +1365,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1403,7 +1403,7 @@
         "Coffee Shop"
       ],
       "category_id": "13005043",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1440,7 +1440,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1477,7 +1477,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1514,7 +1514,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1552,7 +1552,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1589,7 +1589,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1625,7 +1625,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1662,7 +1662,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1699,7 +1699,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1736,7 +1736,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1774,7 +1774,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1811,7 +1811,7 @@
         "Debit"
       ],
       "category_id": "21006000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1847,7 +1847,7 @@
         "Service"
       ],
       "category_id": "18000000",
-      "date": "2018-12-01",
+      "date": "2018-01-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1884,7 +1884,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1921,7 +1921,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1958,7 +1958,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -1996,7 +1996,7 @@
         "Coffee Shop"
       ],
       "category_id": "13005043",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2033,7 +2033,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2070,7 +2070,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2107,7 +2107,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2145,7 +2145,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2182,7 +2182,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2218,7 +2218,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2255,7 +2255,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2292,7 +2292,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2329,7 +2329,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2367,7 +2367,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2404,7 +2404,7 @@
         "Debit"
       ],
       "category_id": "21006000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2440,7 +2440,7 @@
         "Service"
       ],
       "category_id": "18000000",
-      "date": "2019-01-01",
+      "date": "2019-02-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2477,7 +2477,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2514,7 +2514,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2551,7 +2551,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2589,7 +2589,7 @@
         "Coffee Shop"
       ],
       "category_id": "13005043",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2626,7 +2626,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2663,7 +2663,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2700,7 +2700,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2738,7 +2738,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2775,7 +2775,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2811,7 +2811,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2848,7 +2848,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2885,7 +2885,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2019-02-01",
+      "date": "2019-03-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2922,7 +2922,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2019-03-01",
+      "date": "2019-04-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2960,7 +2960,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-03-01",
+      "date": "2019-04-12",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -2997,7 +2997,7 @@
         "Debit"
       ],
       "category_id": "21006000",
-      "date": "2019-03-01",
+      "date": "2019-04-16",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3033,7 +3033,7 @@
         "Service"
       ],
       "category_id": "18000000",
-      "date": "2019-03-01",
+      "date": "2019-04-17",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3070,7 +3070,7 @@
         "Gyms and Fitness Centers"
       ],
       "category_id": "17018000",
-      "date": "2019-03-01",
+      "date": "2019-04-18",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3101,13 +3101,13 @@
     {
       "account_id": "wp5rJy31NMfyEJNDvoqXhbwLlRaEGyCrwWWdy",
       "account_owner": null,
-      "amount": -500,
+      "amount": 500,
       "category": [
         "Travel",
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-03-01",
+      "date": "2019-04-19",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3144,7 +3144,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-03-01",
+      "date": "2019-04-20",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3182,7 +3182,7 @@
         "Coffee Shop"
       ],
       "category_id": "13005043",
-      "date": "2019-03-01",
+      "date": "2019-04-21",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3219,7 +3219,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-03-01",
+      "date": "2019-04-22",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3256,7 +3256,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-03-01",
+      "date": "2019-04-23",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3293,7 +3293,7 @@
         "Airlines and Aviation Services"
       ],
       "category_id": "22001000",
-      "date": "2019-03-01",
+      "date": "2019-04-24",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3331,7 +3331,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-03-01",
+      "date": "2019-04-25",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3368,7 +3368,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-03-01",
+      "date": "2019-04-26",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3404,7 +3404,7 @@
         "Payment"
       ],
       "category_id": "16000000",
-      "date": "2019-04-01",
+      "date": "2019-05-01",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3441,7 +3441,7 @@
         "Restaurants"
       ],
       "category_id": "13005000",
-      "date": "2019-04-01",
+      "date": "2019-05-03",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3478,7 +3478,7 @@
         "Bicycles"
       ],
       "category_id": "19007000",
-      "date": "2019-04-01",
+      "date": "2019-05-11",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3515,7 +3515,7 @@
         "Credit Card"
       ],
       "category_id": "16001000",
-      "date": "2019-04-01",
+      "date": "2019-05-12",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
@@ -3553,7 +3553,7 @@
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-04-01",
+      "date": "2019-05-13",
       "iso_currency_code": "USD",
       "location": {
         "address": null,
