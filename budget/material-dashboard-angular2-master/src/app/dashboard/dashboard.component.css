@@ -25,3 +25,7 @@
   stroke: steelblue;
   stroke-width: 2px;
 }
+
+text {
+    stroke-width: 3px;
+}

@@ -17,17 +17,17 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
- 
+
   ngOnInit() {
 
       console.log(transactionsTest['default'].transactions);
 
-      let transactions = transactionsTest['default'].transactions;
+      const transactions = transactionsTest['default'].transactions;
 
       const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
       transactions.map(element => {
-        if (element['date'].substring(5,7) === "05" || element['date'].substring(5,7) === "04") {
+        if (element['date'].substring(5, 7) === '05' || element['date'].substring(5, 7) === '04') {
           this.line_array.push(
             {'date': Date.parse(element['date']), 'cost': element['amount']}
           )
