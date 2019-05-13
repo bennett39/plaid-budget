@@ -24,7 +24,7 @@ export class LineChartComponent implements OnInit {
     d3.select('svg').remove();
 
     // set the dimensions and margins of the graph
-    var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    var margin = {top: 20, right: 20, bottom: 30, left: 50};
     len = len - margin.left - margin.right,
     hei = hei - margin.top - margin.bottom;
 
