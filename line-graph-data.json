@@ -1,10 +1,10 @@
 // FORMAT:
 // {
-//  day: {
-//    prev_month: value,
-//    curr_month: value
-//  }
-//}
+//   "day": {
+//     "prev_month": cumulative_value,
+//     "curr_month": cumulative_value
+//   }
+// }
 
 {
   "1": {
