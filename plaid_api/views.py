@@ -108,6 +108,43 @@ def transactions(request):
 
 @api_view(['GET'])
 @permission_classes((IsAuthenticated, ))
+def linegraph(request):
+    access_tokens = lookup_access_tokens(request.user)
+    start_date = '{:%Y-%m-%d}'.format(datetime.datetime.now()
+                + datetime.timedelta(-62))
+    end_date = '{:%Y-%m-%d}'.format(datetime.datetime.now())
+    data = {}
+    for access_token in access_tokens:
+        try:
+            data[access_token] = \
+                client.Transactions.get(access_token, start_date, end_date)
+        except plaid.errors.PlaidError as e:
+            data[access_token] = format_error(e)
+    curr_month = datetime.datetime.today().month
+    prev_month = curr_month - 1
+    prev_total = curr_total = 0
+    output = {}
+    for i in range(1, 32):
+        output[i] = {
+            prev_month: 0,
+            curr_month: 0
+        }
+    for token in data:
+        for t in data[token]["transactions"]:
+            date = datetime.datetime.strptime(t['date'], '%Y-%m-%d').date()
+            if t['amount'] < 0 and date.month in output[1]:
+                output[date.day][date.month] += int(t['amount'] * 100)
+    for key in output:
+        val = output[key]
+        prev_total += val[prev_month]
+        curr_total += val[curr_month]
+        val[prev_month] = prev_total / 100.00
+        val[curr_month] = curr_total / 100.00
+    return Response({'error': None, 'linegraph': output})
+
+
+@api_view(['GET'])
+@permission_classes((IsAuthenticated, ))
 def balance(request):
     """
     Retrieve real-time balance data for each of an Item's accounts

@@ -11,4 +11,5 @@ urlpatterns = [
     path('transactions', views.transactions),
     path('balance', views.balance),
     path('accounts', views.accounts),
+    path('linegraph', views.linegraph),
 ]
