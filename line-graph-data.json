@@ -1,3 +1,11 @@
+// FORMAT:
+// {
+//  day: {
+//    prev_month: value,
+//    curr_month: value
+//  }
+//}
+
 {
   "1": {
     "4": 0,
