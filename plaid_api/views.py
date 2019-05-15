@@ -130,17 +130,20 @@ def linegraph(request):
             curr_month: 0
         }
     for token in data:
-        for t in data[token]["transactions"]:
-            date = datetime.datetime.strptime(t['date'], '%Y-%m-%d').date()
-            if t['amount'] < 0 and date.month in output[1]:
-                output[date.day][date.month] += int(t['amount'] * 100)
+        try:
+            for t in data[token]["transactions"]:
+                date = datetime.datetime.strptime(t['date'], '%Y-%m-%d').date()
+                if t['amount'] < 0 and date.month in output[1]:
+                    output[date.day][date.month] += int(t['amount'] * 100)
+        except:
+            print(f"Error parsing data[{token}]['transactions']")
     for key in output:
         val = output[key]
         prev_total += val[prev_month]
         curr_total += val[curr_month]
         val[prev_month] = prev_total / 100.00
         val[curr_month] = curr_total / 100.00
-    return Response({'error': None, 'linegraph': output})
+    return Response(response)
 
 
 @api_view(['GET'])
