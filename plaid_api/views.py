@@ -143,7 +143,7 @@ def linegraph(request):
         curr_total += val[curr_month]
         val[prev_month] = prev_total / 100.00
         val[curr_month] = curr_total / 100.00
-    return Response(response)
+    return Response({"errors": None, "linegraph": output})
 
 
 @api_view(['GET'])
