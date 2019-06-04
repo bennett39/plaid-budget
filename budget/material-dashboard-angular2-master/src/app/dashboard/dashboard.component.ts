@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
           this.line_array.push(
             {
               'month': this.months[(new Date(element['date'].substring(5, 7)).getMonth()).toLocaleString('en-us')],
-              'date': parseInt(element['date'].substring(8, 10)),
+              'date': parseInt(element['date'].substring(8, 10), 10),
               'cost': element['amount']
             }
           )
