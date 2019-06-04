@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import * as Chartist from 'chartist';
 import * as transactionsTest from '../../../../my-app/src/app/transactions-sandbox.json';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,6 +12,8 @@ export class DashboardComponent implements OnInit {
 
   // line_array: Array<any>;
   line_array = [];
+  months = ['January', 'February', 'March', 'April', 'May', 'June',
+           'July', 'August', 'September', 'October', 'November', 'December' ];
 
   constructor() { }
 
@@ -23,13 +23,17 @@ export class DashboardComponent implements OnInit {
       console.log(transactionsTest['default'].transactions);
 
       const transactions = transactionsTest['default'].transactions;
+      // this.line_array = this.data;
 
-      const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
       transactions.map(element => {
         if (element['date'].substring(5, 7) === '05' || element['date'].substring(5, 7) === '04') {
           this.line_array.push(
-            {'date': Date.parse(element['date']), 'cost': element['amount']}
+            {
+              'month': this.months[(new Date(element['date'].substring(5, 7)).getMonth()).toLocaleString('en-us')],
+              'date': parseInt(element['date'].substring(8, 10)),
+              'cost': element['amount']
+            }
           )
         }
       })

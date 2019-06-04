@@ -24,58 +24,82 @@ export class LineChartComponent implements OnInit {
     d3.select('svg').remove();
 
     // set the dimensions and margins of the graph
-    var margin = {top: 20, right: 20, bottom: 30, left: 50};
+    const margin = {top: 20, right: 20, bottom: 30, left: 50};
     len = len - margin.left - margin.right,
     hei = hei - margin.top - margin.bottom;
 
-    // parse the date / time
-    var parseDate = d3.timeFormat("%Y-%m-%d");
-
     // set the ranges
-    var x = d3.scaleTime().range([0, len]);
-    var y = d3.scaleLinear().range([hei, 0]);
-
-    var formatDate = d3.timeFormat("%m");
-
-    data.forEach(element => {
-      formatDate(parseDate(element['date']))
-    })
-
-    console.log(data);
+    const x = d3.scaleTime().range([0, len]);
+    const y = d3.scaleLinear().range([hei, 0]);
 
     // define the line
-    var valueline = d3.line()
+    const line = d3.line()
     .x(function(d) { return x(d['date']); })
     .y(function(d) { return y(d['cost']); });
+
+    // Nest data by month.
+    const months = d3.nest()
+    .key(function(d) { return d['month']; })
+    .entries(data);
+
+    console.log(months);
+
+    // Compute the maximum cost per month, needed for the y-domain.
+    months.forEach(function(s) {
+      s.maxCost = d3.max(s.values, function(d) { return d.cost; });
+    });
+
+  // Compute the minimum and maximum date across symbols.
+  // We assume values are sorted by date.
+  x.domain([
+    d3.min(months, function(s) { return s.values[0].date; }),
+    d3.max(months, function(s) { return s.values[s.values.length - 1].date; })
+  ]);
+
 
     // append the svg obgect to the body of the page
     // appends a 'group' element to 'svg'
     // moves the 'group' element to the top left margin
-    var svg = d3.select('.chart_line').append("svg")
-    .attr("width", len + margin.left + margin.right)
-    .attr("height", hei + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+    const svg = d3.select('.chart_line').append('svg')
+    .attr('width', len + margin.left + margin.right)
+    .attr('height', hei + margin.top + margin.bottom)
+    .append('g')
+    .attr('transform',
+          'translate(' + margin.left + ',' + margin.top + ')');
 
-    
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.cost; })]);
 
     // Add the valueline path.
-    svg.append("path")
-      .data([data])
-      .attr("class", "line")
-      .attr("d", valueline);
+    svg.append('path')
+      .data(months)
+      .attr('class', 'line')
+      .attr('d', function() {
+        y.domain([0, months[0].maxCost]);
+        return line(months[0].values);
+      })
 
+    svg.append('path')
+    .data(months)
+    .attr('class', 'line')
+    .attr('d', function() {
+      y.domain([0, months[1].maxCost]);
+      return line(months[1].values);
+    })
+
+    
+    // svg.append('path')
+    // .data(months)
+    // .attr('class', 'line')
+    // .attr('d', function(d) {
+    //   y.domain([0, d.maxCost]);
+    // })
+      
     // Add the X Axis
-    svg.append("g")
-      .attr("transform", "translate(0," + hei + ")")
+    svg.append('g')
+      .attr('transform', 'translate(0,' + hei + ')')
       .call(d3.axisBottom(x));
 
     // Add the Y Axis
-    svg.append("g")
+    svg.append('g')
       .call(d3.axisLeft(y));
 }
 
