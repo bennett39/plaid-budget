@@ -2916,7 +2916,7 @@
     {
       "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
       "account_owner": null,
-      "amount": 25,
+      "amount": 130,
       "category": [
         "Payment",
         "Credit Card"
@@ -2953,7 +2953,7 @@
     {
       "account_id": "wp5rJy31NMfyEJNDvoqXhbwLlRaEGyCrwWWdy",
       "account_owner": null,
-      "amount": 5.4,
+      "amount": 620,
       "category": [
         "Travel",
         "Car Service",
@@ -3544,16 +3544,201 @@
       "unofficial_currency_code": null
     },
     {
+      "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
+      "account_owner": null,
+      "amount": 650,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "date": "2019-05-13",
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "state": null,
+        "store_number": null,
+        "zip": null
+      },
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_id": "ZLj3erbANXtQ96jxV4B7ILR7KG6Kx5tgp74kR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
+      "account_owner": null,
+      "amount": 896,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "date": "2019-05-15",
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "state": null,
+        "store_number": null,
+        "zip": null
+      },
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_id": "ZLj3erbANXtQ96jxV4B7ILR7KG6Kx5tgp74kR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
+      "account_owner": null,
+      "amount": 1024,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "date": "2019-05-16",
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "state": null,
+        "store_number": null,
+        "zip": null
+      },
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_id": "ZLj3erbANXtQ96jxV4B7ILR7KG6Kx5tgp74kR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
+      "account_owner": null,
+      "amount": 698,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "date": "2019-05-17",
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "state": null,
+        "store_number": null,
+        "zip": null
+      },
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_id": "ZLj3erbANXtQ96jxV4B7ILR7KG6Kx5tgp74kR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
+      "account_id": "l418dp7olxiDAaok8E1pi5Q7n9NGkzfZQbbAp",
+      "account_owner": null,
+      "amount": 2500,
+      "category": [
+        "Payment",
+        "Credit Card"
+      ],
+      "category_id": "16001000",
+      "date": "2019-05-19",
+      "iso_currency_code": "USD",
+      "location": {
+        "address": null,
+        "city": null,
+        "lat": null,
+        "lon": null,
+        "state": null,
+        "store_number": null,
+        "zip": null
+      },
+      "name": "CREDIT CARD 3333 PAYMENT *//",
+      "payment_meta": {
+        "by_order_of": null,
+        "payee": null,
+        "payer": null,
+        "payment_method": null,
+        "payment_processor": null,
+        "ppd_id": null,
+        "reason": null,
+        "reference_number": null
+      },
+      "pending": false,
+      "pending_transaction_id": null,
+      "transaction_id": "ZLj3erbANXtQ96jxV4B7ILR7KG6Kx5tgp74kR",
+      "transaction_type": "special",
+      "unofficial_currency_code": null
+    },
+    {
       "account_id": "wp5rJy31NMfyEJNDvoqXhbwLlRaEGyCrwWWdy",
       "account_owner": null,
-      "amount": 5.4,
+      "amount": 800,
       "category": [
         "Travel",
         "Car Service",
         "Ride Share"
       ],
       "category_id": "22006001",
-      "date": "2019-05-13",
+      "date": "2019-05-20",
       "iso_currency_code": "USD",
       "location": {
         "address": null,

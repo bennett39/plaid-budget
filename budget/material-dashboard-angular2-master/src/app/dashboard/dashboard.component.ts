@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as transactionsTest from '../../../../my-app/src/app/transactions-sandbox.json';
+import * as d3 from 'd3';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,6 @@ import * as transactionsTest from '../../../../my-app/src/app/transactions-sandb
 
 export class DashboardComponent implements OnInit {
 
-  // line_array: Array<any>;
   line_array = [];
   months = ['January', 'February', 'March', 'April', 'May', 'June',
            'July', 'August', 'September', 'October', 'November', 'December' ];
@@ -20,26 +20,21 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
 
-      console.log(transactionsTest['default'].transactions);
 
       const transactions = transactionsTest['default'].transactions;
-      // this.line_array = this.data;
+      const parseDate = d3.timeParse('%Y-%m-%d');
 
-
-      transactions.map(element => {
+      transactions.map((element, index) => {
         if (element['date'].substring(5, 7) === '05' || element['date'].substring(5, 7) === '04') {
           this.line_array.push(
             {
               'month': this.months[(new Date(element['date'].substring(5, 7)).getMonth()).toLocaleString('en-us')],
-              'date': parseInt(element['date'].substring(8, 10), 10),
+              'date': parseDate(element['date']).getDate(),
               'cost': element['amount']
             }
           )
         }
       })
-
       console.log(this.line_array);
-
-      // https://www.creative-tim.com/product/material-dashboard-angular2
   }
 }
