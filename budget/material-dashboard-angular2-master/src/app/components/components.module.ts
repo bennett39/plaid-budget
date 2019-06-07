@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   imports: [
@@ -15,14 +14,12 @@ import { LineChartComponent } from './line-chart/line-chart.component';
   declarations: [
     FooterComponent,
     NavbarComponent,
-    SidebarComponent,
-    LineChartComponent
+    SidebarComponent
   ],
   exports: [
     FooterComponent,
     NavbarComponent,
-    SidebarComponent,
-    LineChartComponent
+    SidebarComponent
   ]
 })
 export class ComponentsModule { }

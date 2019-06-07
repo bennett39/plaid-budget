@@ -1,7 +1,7 @@
 .light-background,
 .dark-background {
-    margin: 120px -15px 120px -15px;
-    padding: 8rem 2rem 8rem 2rem;
+    margin: 10rem 0px 10rem 0px;
+    padding: 8rem 1rem 8rem 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,12 +12,14 @@
     color: #fff;
 }
 
-.light-background {
+/* .light-background {
     color: #111;
-}
+} */
 
 .callout {
     align-items: center;
+    text-align: center;
+    padding: 100px;
 }
 
 .line {
@@ -29,3 +31,23 @@
 text {
     stroke-width: 3px;
 }
+
+i.material-icons {
+    font-size: 80px;
+    font-weight: 700;
+    color: indianred;
+}
+
+.spending_callout {
+    font-size: 24px;
+    color: indianred;
+    font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+    .light-background {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+

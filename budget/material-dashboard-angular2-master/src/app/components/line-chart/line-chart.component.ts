@@ -59,7 +59,11 @@ export class LineChartComponent implements OnInit {
 
     console.log(months);
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    // const color = d3.scaleOrdinal(d3.schemePaired);
+
+    const color = d3.scaleOrdinal() // D3 Version 4
+    .domain(data)
+    .range(['steelblue', '#111']);
 
     /* Scale */
     const xScale = d3.scaleTime()
@@ -193,14 +197,14 @@ export class LineChartComponent implements OnInit {
         .attr('cx', len - 90)
         .attr('cy', hei - 70)
         .attr('r', 6)
-        .style('fill', 'rgb(255, 127, 14)')
+        .style('fill', 'steelblue')
         .attr('opacity', '0.45')
 
         svg.append('circle')
         .attr('cx', len - 90)
         .attr('cy', hei - 50)
         .attr('r', 6)
-        .style('fill', 'rgb(31, 119, 180)')
+        .style('fill', '#111')
         .attr('opacity', '0.45')
 
         svg.append('text')
